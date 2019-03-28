@@ -14,13 +14,13 @@
 
 - [开源中国](https://www.oschina.net/)
 - [推酷](https://www.tuicool.com/)
-- [刘未鹏 | Mind Hacks](http://mindhacks.cn/)
-- [平凡希](https://www.cnblogs.com/xiaoxi/)
 
 ### 个人博客类
 
 - [纯洁的微笑](http://ityouknow.com/)
 - [阿里H神Hollis](https://www.hollischuang.com/)
+- [刘未鹏 | Mind Hacks](http://mindhacks.cn/)
+- [平凡希](https://www.cnblogs.com/xiaoxi/)
 
 ### 最火github项目
 
