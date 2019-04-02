@@ -21,6 +21,7 @@
 - [阿里H神Hollis](https://www.hollischuang.com/)
 - [刘未鹏 | Mind Hacks](http://mindhacks.cn/)
 - [平凡希](https://www.cnblogs.com/xiaoxi/)
+- [廖雪峰大神](https://www.liaoxuefeng.com/)
 
 ### 最火github项目
 

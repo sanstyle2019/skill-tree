@@ -148,7 +148,7 @@ Docker、Kubernetes
 
 ### 前沿技术领域
 
-#### 1.微服务
+#### 1.微服务&分布式
 ```
 Spring Cloud
 ZooKeeper
