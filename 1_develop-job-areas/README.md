@@ -1,12 +1,16 @@
 ## 开发职位领域
+``` 
+注意：学习笔记之类的就在这个目录，建议内容要精简
+在对应目录下建个子目录，建议以姓的拼音，然后在你的专属目录下随你怎么玩
+```
 
 ### 前端开发
-``` 
+```
 小程序(微信)、JavaScript(ES6)、Vue.js、Node.js、jQuery
 ```
 
 ### 后端开发
-``` 
+```
 Java、SpringBoot、SSM、
 Python、爬虫、Django、Flask、Tornado
 Go
