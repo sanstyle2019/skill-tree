@@ -313,9 +313,39 @@ case class Person(name: String, age: Int)
 ```
 
 #### 正则表达式
+- [Scala正则表达式](http://www.runoob.com/scala/scala-regular-expressions.html)
 ```
 Scala 通过 scala.util.matching 包中的 Regex 类来支持正则表达式。以下实例演示了使用正则表达式查找单词 Scala :
 	val pattern = "Scala".r
     val str = "Scala is Scalable and cool"
     println(pattern findFirstIn str) // Some(Scala)
+```
+
+#### 异常处理
+```
+try {
+	val f = new FileReader("input.txt")
+} catch {
+	case ex: FileNotFoundException => {
+		println("Missing file exception")
+	}
+	case ex: IOException => {
+		println("IO Exception")
+	}
+} finally {
+	println("Exiting finally...")
+}
+```
+
+#### 提取器(Extractor)[重点]
+```
+apply 构造
+unapply 提取
+使用match case提取对象信息时，unapply自动执行
+```
+
+#### 文件 I/O
+```
+import java.io._
+import scala.io._
 ```
