@@ -61,14 +61,66 @@ object HelloWorld {
             case _ => println("无法计算")
         }
 
-        print("请输入任意信息：")
-        var line = Console.readLine()
-        println("您输入的是：" + line)
+        //        print("请输入任意信息：")
+        //        var line = Console.readLine()
+        //        println("您输入的是：" + line)
 
         println("文件内容为：")
         Source.fromFile("test.txt", enc = "UTF-8").foreach {
             print
         }
+
+        println()
+        val numPairs = List((2, 5), (3, -7), (20, 56))
+        for ((a, b) <- numPairs) {
+            println(a * b)
+        }
+
+        // CLASS COMPOSITION WITH MIXINS 混合类组成
+        abstract class A {
+            val message: String
+        }
+        class B extends A {
+            val message = "I'm an instance of class B"
+        }
+        trait C extends A {
+            def loudMessage = message.toUpperCase()
+        }
+        class D extends B with C
+
+        val d = new D
+        println(d.message)  // I'm an instance of class B
+        println(d.loudMessage)  // I'M AN INSTANCE OF CLASS B
+
+        abstract class AbsIterator {
+            type T
+            def hasNext: Boolean
+            def next(): T
+        }
+        class StringIterator(s: String) extends AbsIterator {
+            type T = Char
+            private var i = 0
+            def hasNext = i < s.length
+            def next() = {
+                val ch = s charAt i
+                i += 1
+                ch
+            }
+        }
+        trait RichIterator extends AbsIterator {
+            def foreach(f: T => Unit): Unit = while (hasNext) f(next())
+        }
+        class RichStringIter extends StringIterator("Scala") with RichIterator
+        val richStringIter = new RichStringIter
+        richStringIter foreach println
+
+        // HIGHER-ORDER FUNCTIONS 高阶函数
+        val salaries = Seq(20000, 70000, 40000)
+        val doubleSalary = (x: Int) => x * 2
+//        val newSalaries = salaries.map(doubleSalary) // List(40000, 140000, 80000)
+//        val newSalaries = salaries.map(x => x * 2) // List(40000, 140000, 80000)
+        val newSalaries = salaries.map(_ * 2)
+        println(newSalaries)
     }
 
     // 构造

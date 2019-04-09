@@ -36,6 +36,7 @@ import java.util.{HashMap => _, _} // 引入了util包的所有成员，但是Ha
 ```
 
 #### 数据类型
+![数据类型](https://docs.scala-lang.org/resources/images/tour/unified-types-diagram.svg)
 ```
 Byte
 Short
@@ -348,4 +349,22 @@ unapply 提取
 ```
 import java.io._
 import scala.io._
+```
+
+#### 混合类组成
+```
+abstract class A {
+    val message: String
+}
+class B extends A {
+    val message = "I'm an instance of class B"
+}
+trait C extends A {
+    def loudMessage = message.toUpperCase()
+}
+class D extends B with C
+
+val d = new D
+println(d.message)  // I'm an instance of class B
+println(d.loudMessage)  // I'M AN INSTANCE OF CLASS B
 ```
