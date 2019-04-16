@@ -18,7 +18,7 @@
 #### Java:Dubbo
 
 
-### 2.分布式问题
+### 2.分布式问题 Distributed
 
 #### 分布式事务
 
@@ -29,7 +29,7 @@
 #### 分布式一致性(zookeeper)
 
 
-### 3.后端架构常用中间价
+### 3.后端架构常用中间价 Architecture Middleware
 
 ### Cache(redis)
 
