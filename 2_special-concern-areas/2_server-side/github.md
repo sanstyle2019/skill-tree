@@ -1,12 +1,17 @@
 [TOC]
 ## Github开源脚手架
 ``` 
-收集一些服务端Github开源脚手架项目
+收集一些服务端Github开源项目
 ```
 
 ### 1.Java
 
+#### Java:Basic
+- [互联网 Java 工程师进阶知识完全扫盲](https://github.com/doocs/advanced-java)
+- [Java学习+面试指南](https://github.com/Snailclimb/JavaGuide)
+
 #### Java:SpringBoot
+- [mall项目是一套电商系统，包括前台商城系统及后台管理系统](https://github.com/macrozheng/mall)
 
 #### Java:SpringCloud
 

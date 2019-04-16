@@ -5,7 +5,7 @@
 ```
 
 ### 1.Linux(必备技能)
-
+- [Java 程序员眼中的 Linux](https://github.com/judasn/Linux-Tutorial)
 
 ### 2.Nginx(必备技能)
 
