@@ -1,10 +1,13 @@
-import scala.util.matching.Regex
 import scala.io._
+import scala.reflect.io.File
+import scala.util.matching.Regex
 
-object HelloWorld {
+// 1. scalac HelloScala.scala
+// 2. scala HelloScala
+object HelloScala {
     def main(args: Array[String]): Unit = {
-        // HelloWorld
-        println("Hello, World")
+        // HelloScala
+        println("Hello, Scala")
         // 变量
         var myVar: String = "Foo"
         myVar = "Too"
@@ -53,10 +56,10 @@ object HelloWorld {
         println((pattern findAllIn (str)).mkString(","))
         println(pattern replaceFirstIn(str, "Java"))
 
-        val x = HelloWorld(5)
+        val x = HelloScala(5)
         println(x)
         x match {
-            case HelloWorld(num) => println(x + " 是 " + num + " 的两倍！")
+            case HelloScala(num) => println(x + " 是 " + num + " 的两倍！")
             // unapply 被调用
             case _ => println("无法计算")
         }
@@ -66,7 +69,7 @@ object HelloWorld {
         //        println("您输入的是：" + line)
 
         println("文件内容为：")
-        Source.fromFile("test.txt", enc = "UTF-8").foreach {
+        Source.fromFile(".." + File.separator + "test.txt", enc = "UTF-8").foreach {
             print
         }
 
@@ -89,18 +92,22 @@ object HelloWorld {
         class D extends B with C
 
         val d = new D
-        println(d.message)  // I'm an instance of class B
-        println(d.loudMessage)  // I'M AN INSTANCE OF CLASS B
+        println(d.message) // I'm an instance of class B
+        println(d.loudMessage) // I'M AN INSTANCE OF CLASS B
 
         abstract class AbsIterator {
             type T
+
             def hasNext: Boolean
+
             def next(): T
         }
         class StringIterator(s: String) extends AbsIterator {
             type T = Char
             private var i = 0
+
             def hasNext = i < s.length
+
             def next() = {
                 val ch = s charAt i
                 i += 1
@@ -117,8 +124,8 @@ object HelloWorld {
         // HIGHER-ORDER FUNCTIONS 高阶函数
         val salaries = Seq(20000, 70000, 40000)
         val doubleSalary = (x: Int) => x * 2
-//        val newSalaries = salaries.map(doubleSalary) // List(40000, 140000, 80000)
-//        val newSalaries = salaries.map(x => x * 2) // List(40000, 140000, 80000)
+        //        val newSalaries = salaries.map(doubleSalary) // List(40000, 140000, 80000)
+        //        val newSalaries = salaries.map(x => x * 2) // List(40000, 140000, 80000)
         val newSalaries = salaries.map(_ * 2)
         println(newSalaries)
     }
