@@ -1,11 +1,11 @@
 ## 技术开发概况
 
 ### 原理
-- 数据结构&算法
-- 网络&安全
-- 高级算法&数学原理
+- 数据结构&常见算法
 - 数据库原理
+- 网络&安全
 - 操作系统原理
+- 高级算法&数学原理
 - 语言编译原理
 
 ### 领域
@@ -84,12 +84,42 @@ Node：
 8.shell   4
 9.lua   4
 10.c/c++   2+3+4+5+6
-```
 
-#### 2.排行
-``` 
 5:  c/c++ (服务端&数据库&服务器&推荐系统数据挖掘数据分析&人工智能机器学习深度学习)
     python(服务端&大数据处理&运维层&推荐系统数据挖掘数据分析&人工智能机器学习深度学习)
 2:  javascript(用户端&服务端),java(服务端&大数据处理),go(服务端&运维层),sql(数据库大数据处理&数据分析)
 1:  html/css(用户端),scala(大数据处理),shell(运维层),lua(运维层)
 ```
+
+#### 2.排行
+- [TIOBE编程语言排行榜](https://hellogithub.com/report/tiobe/)
+``` 
+Java,C/C++,Python,C#
+JavaScript,SQL,PHP,Objective-C
+Perl,MATLAB,Ruby,Groovy,Swift,Go
+R,[Scratch,]Dart,Scala,Lisp,Lua,Kotlin,
+TypeScript,Julia,Haskell,Clojure,Erlang,Bash
+
+
+Java,C/C++,Python,
+JavaScript,SQL,
+Groovy,Go
+Dart,Scala,Lua,Kotlin,
+TypeScript,Julia,Clojure,Erlang,Bash
+
+JVM语言: Java,Groovy,Scala,Kotlin,Clojure
+
+Java,C/C++,Python,
+JavaScript,SQL,
+Go
+Scala,Lua,
+TypeScript,Julia,Bash
+
+JavaScript,TypeScript,
+Java,C/C++,Python,Go,
+SQL,Scala,
+Lua,Bash,
+Julia
+```
+
+##### 1.
