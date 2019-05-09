@@ -3,6 +3,9 @@
 ```
 持续更新...
 ```
+### 优质工具
+- [4 种基于 Markdown 的幻灯片生成器](https://www.imooc.com/article/34674)
+
 
 ### 优质Chrome插件
 - [Octotree:GitHub code tree on steroids ](https://github.com/ovity/octotree)
