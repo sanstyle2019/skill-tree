@@ -113,13 +113,12 @@ Java,C/C++,Python,
 JavaScript,SQL,
 Go
 Scala,Lua,
-TypeScript,Julia,Bash
+TypeScript,Bash
 
-JavaScript,TypeScript,
-Java,C/C++,Python,Go,
-SQL,Scala,
-Lua,Bash,
-Julia
+Java,C/C++,Python, Go, Node.js
+JavaScript/TypeScript, HTML/CSS
+SQL, Scala, Java,Python
+Lua,Bash, Python,Go
 ```
 
 ##### 1.
