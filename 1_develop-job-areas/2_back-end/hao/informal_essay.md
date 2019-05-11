@@ -173,7 +173,9 @@ Linux: Bash
     AI一等公民: Python
 ```
 
-- 7.总结
+### 总结
+
+#### 红红火火
 ``` 
 1.后端
     Java   [Well use]
@@ -201,57 +203,105 @@ Linux: Bash
 [Hot] 
     分布式微服务 => Java[Well use], Go[Can use]
     数据分析&挖掘 => Python[Well use]
+```    
+
+#### 恍恍惚惚 Top5
+- 1.后端 Java
+```
+SpringCloud,Dubbo,ZK,分布式问题,架构问题
+Web框架: Spring MyBatis SpringBoot (MVC分层)
+Web应用服务器: Tomcat (Java Web Servlet)
+分布式微服务框架: SpringCloud Dubbo Zookeeper (分布式微服务)
+    Dubbo(Netty)
+分布式问题()
+    分布式事务保证
+    分布式锁
+    分布式最终一致性
+    分布式全局唯一ID
+架构问题()
+    扩容: 垂直扩容，水平扩容 DB主从,分区
+    缓存: Guava Cache,Memcached,Redis
+    MQ: 好处多多,业务解耦,异步广播,错峰与限流,最终一致性...
+    业务拆分: 微服务框架,SpringCloud,Dubbo,
+        之后的问题: 服务间通信,跨库事务保证,
+    限流: 一些常见算法来解决吧,漏桶算法,令牌桶算法
+    服务降级服务熔断: Hystrix
+    DB分库分表: 分库,分表...
     
-Top5
-    Java: SpringCloud,Dubbo,ZK,分布式问题,架构问题
-        Web框架: Spring MyBatis SpringBoot (MVC分层)
-        Web应用服务器: Tomcat (Java Web Servlet)
-        分布式微服务框架: SpringCloud Dubbo Zookeeper (分布式微服务)
-            Dubbo(Netty)
-        分布式问题()
-            分布式事务保证
-            分布式锁
-            分布式最终一致性
-            分布式全局唯一ID
-        架构问题()
-            扩容: 垂直扩容，水平扩容 DB主从,分区
-            缓存: Guava Cache,Memcached,Redis
-            MQ: 好处多多,业务解耦,异步广播,错峰与限流,最终一致性...
-            业务拆分: 微服务框架,SpringCloud,Dubbo,
-                之后的问题: 服务间通信,跨库事务保证,
-            限流: 一些常见算法来解决吧,漏桶算法,令牌桶算法
-            服务降级服务熔断: Hystrix
-            DB分库分表: 分库,分表...
-            
-            db,cache,search,mq,nio...
+    db,cache,search,mq,nio...
+
+搜索引擎: Lucene Solr ElasticSearch (数据结构)
+消息队列: ActiveMQ RocketMQ (数据结构)
+
+NIO高性能网络通信: Netty (NIO&网络)
+
+Java的核心: JVM (数据结构,网络,操作系统原理,语言编译原理)
+    JDK里的数据结构用到哪些,集合容器,IO,NIO,Network,多线程
+    内存(线程)模型: 主内存和工作(线程)内存的数据共享问题及happens-before原则
+    线程安全问题: CAS(Atomic类),Unsafe,synchronized关键字,volatile关键字
+    JUC包: AQS,线程池,高性能同步容器
+    死锁问题
+
+数据三要素: 除了计算和存储之外，正是传输赋予其非凡的意义。
+
+[MMP] Java(架构) 真TM无底洞...
+``` 
+
+- 2.数据分析&挖掘 Python
+```      
+Numpy,Pandas,Scipy,Matplotlib,Seaborn
+IDE: 推荐 PyCharm, Jupyter Notebook
+
+1.数据收集 
+    爬虫 Scrapy,Requests...
+    存储 Pymongo...
+2.数据清洗、转换 
+    Numpy,Pandas...
+3.数据分析&挖掘
+    Numpy,Pandas,Scipy...
+4.数据可视化
+    Matplotlib,Seaborn,Pyecharts...
+
+[MMP] Python数据分析&挖掘 商业价值比较大... 
+```
+
+- 3.大数据处理 Scala
+```
+Hadoop,Spark,Flink,Beam
+大数据存储平台: Hadoop,HBase
+大数据仓库平台: Hive,Impala
+大数据实时计算平台: Spark,Flink
+大数据统一计算平台: Beam
+```
+
+- 4.Database SQL
+```  
+MySQL (数据库原理)
+数据库原理: 学了之后技术思维绝对升级
+``` 
+
+- 5.前端交互 JavaScript    
+```  
+Vue.js,jQuery
+前端的重要性在于，它是产品力的体现形式，非常重要
+标准: ECMAScript2015,HTML5,CSS3
+交互: jQuery的生态还是很丰富的，不过Vue.js这种，开发起来很爽
+    Vue生态:
         
-        搜索引擎: Lucene Solr ElasticSearch (数据结构)
-        消息队列: ActiveMQ RocketMQ (数据结构)
-        
-        NIO高性能网络通信: Netty (NIO&网络)
-        
-        Java的核心: JVM (数据结构,网络,操作系统原理,语言编译原理)
-            JDK里的数据结构用到哪些,集合容器,IO,NIO,Network,多线程
-            内存(线程)模型: 主内存和工作(线程)内存的数据共享问题及happens-before原则
-            线程安全问题: CAS(Atomic类),Unsafe,synchronized关键字,volatile关键字
-            JUC包: AQS,线程池,高性能同步容器
-            死锁问题
-        
-        数据三要素: 除了计算和存储之外，正是传输赋予其非凡的意义。
-        
-        [MMP] Java(架构)真TM无底洞...
-    Python: 数据分析&挖掘
-    Scala: 大数据处理(Hadoop,Spark,Flink,Beam)
-    SQL: Database(Mysql) (数据库原理)
-    JavaScript: 前端交互(Vue.js/jQuery)
-    
-基础学习:
-    数据结构&常见算法: 这是最基础的基础
-    数据库原理: 学习数据库的设计思路,提升思维
-    网络&安全: 这个很重要,TCP/IP协议,常见的安全问题及解决办法
-    操作系统原理: 这个就比较难了
-        CPU(计算),寄存器高速缓存内存磁盘(存储),磁盘&网络IO(数据传输字节流转)
-        内核态,用户态,进程,线程...
-    高级算法&数学原理: 这个也难,哈哈哈
-    语言编译原理: 这个也难,呵呵呵
+样式: 推荐直接采用好的样式组件，满足大部分基础页面需求
+    好看好用的UI组件
+    Mobile:  
+    PC: 
+```
+
+#### 基础学习
+```
+数据结构&常见算法: 这是最基础的基础
+数据库原理: 学习数据库的设计思路,提升思维
+网络&安全: 这个很重要,TCP/IP协议,常见的安全问题及解决办法
+操作系统原理: 这个就比较难了
+    CPU(计算),寄存器高速缓存内存磁盘(存储),磁盘&网络IO(数据传输字节流转)
+    内核态,用户态,进程,线程...
+高级算法&数学原理: 这个也难,哈哈哈
+语言编译原理: 这个也难,呵呵呵
 ```
