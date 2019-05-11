@@ -311,22 +311,48 @@ Vue.js,jQuery
 
 #### 系统之路
 ``` 
-1.用户端 交互+样式 
+1.用户端 交互+样式 JavaScript [Coding] [Top]
     Vue.js/jQuery + 好用的UI样式组件
-2.服务端
-    SpringBoot/SpringCloud + Mybatis 
-    + Redis + RabbitMQ/ActiveMQ + ElasticSearch
-3.数据库
+    
+    这个要重视起来，暂时优先，目前对搭建基础平台来说最薄弱
+
+2.服务端 Java [Coding] [Top]
+    SpringBoot/SpringCloud
+        业务拆分: 先单体,再拆分,为快速成型 
+    + Mybatis + Redis 先只接入Redis
+    
+    + RabbitMQ/ActiveMQ 
+    + ElasticSearch
+    
+    这个要重视起来，近年核心，架构能力
+    做 DevOps 及架构，适当关注一下 Go ，是挑战 Java 地位排名第二的语言(第一当然是 Python )
+
+3.数据库 SQL
     MySQL(交易类业务数据), Mongo(内容类业务数据)
+
 4.运维
     Nginx,Tomcat,
     Linux,Docker
-5.大数据处理
+
+5.大数据处理 Scala [Coding] [Top]
     Hadoop,Spark,Flink,Kafka
-6.数据分析&挖掘
-    Scrapy, ElasticSearch
-    Numpy,Pandas,Scipy,Matplotlib,Seaborn
-7.推荐系统
+    
+    这个要重视起来，近期优先，对找工作最有帮助
+
+6.数据分析&挖掘 Python [Coding]
+    数据收集: 
+        爬虫: Scrapy,Requests,Redis,Mongo,ElasticSearch(ELK可进行简单的数据分析)
+        日志: 大数据处理收集到的系统访问日志
+        开源数据集
+    数据清洗、转换、分析、挖掘:
+        Numpy,Pandas,Scipy,
+    数据可视化:
+        Matplotlib,Seaborn,Pyecharts
+        
+    这个要重视起来，闲时玩玩，只是觉得有意思
+    Python 的综合影响力再过一些年头，应该会超过目前No.1的 Java ，拭目以待吧
+
+7.推荐系统 
     ?
 
 1.交易产品 (基础交易系统)
