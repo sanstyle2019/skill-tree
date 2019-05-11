@@ -137,7 +137,11 @@ Python,C/C++
 - 1.后端 Java,C/C++,Python, Go, Node.js
 ```
 优先选择: Java    
+    响应式编程: Vert.x,RxJava Spring的WebFlux
+    
     暂不考虑: Python,Go,Node.js 
+    Go的性能高，适合高并发业务场景？
+    Node.js的并发性能高，更节省服务器？
 ```
 
 - 2.前端 JavaScript/TypeScript, HTML/CSS
@@ -203,14 +207,14 @@ Linux: Bash
 [Hot] 
     分布式微服务 => Java[Well use], Go[Can use]
     数据分析&挖掘 => Python[Well use]
-```    
+```
 
 #### 恍恍惚惚 Top5
 - 1.后端 Java
 ```
 SpringCloud,Dubbo,ZK,分布式问题,架构问题
 Web框架: Spring MyBatis SpringBoot (MVC分层)
-Web应用服务器: Tomcat (Java Web Servlet)
+Web应用服务器: Tomcat (Java Web Servlet PK WebFlux)
 分布式微服务框架: SpringCloud Dubbo Zookeeper (分布式微服务)
     Dubbo(Netty)
 分布式问题()
@@ -227,9 +231,12 @@ Web应用服务器: Tomcat (Java Web Servlet)
     限流: 一些常见算法来解决吧,漏桶算法,令牌桶算法
     服务降级服务熔断: Hystrix
     DB分库分表: 分库,分表...
+    接入搜索引擎，提升数据量大时系统的查询效率
+    网关接入层: Nginx(Lua Openrestry) 流量控制 高并发时可在这一层进行捕捉处理
+    必要时可进行NIO,响应式编程的优化，集群大时提升单机TPS,QPS可大大降低成本
     
     db,cache,search,mq,nio...
-
+    
 搜索引擎: Lucene Solr ElasticSearch (数据结构)
 消息队列: ActiveMQ RocketMQ (数据结构)
 
@@ -267,9 +274,10 @@ IDE: 推荐 PyCharm, Jupyter Notebook
 
 - 3.大数据处理 Scala
 ```
-Hadoop,Spark,Flink,Beam
+Hadoop,Spark,Flink,Kafka,Beam
 大数据存储平台: Hadoop,HBase
 大数据仓库平台: Hive,Impala
+大数据消息队列: Kafka
 大数据实时计算平台: Spark,Flink
 大数据统一计算平台: Beam
 ```
@@ -292,16 +300,49 @@ Vue.js,jQuery
     好看好用的UI组件
     Mobile:  
     PC: 
+后端: 关注一下Node.js     
+```
+
+- 6.关注一下 Go
+``` 
+后端 分布式高并发场景
+容器 Docker,K8s
+```
+
+#### 系统之路
+``` 
+1.用户端 交互+样式 
+    Vue.js/jQuery + 好用的UI样式组件
+2.服务端
+    SpringBoot/SpringCloud + Mybatis 
+    + Redis + RabbitMQ/ActiveMQ + ElasticSearch
+3.数据库
+    MySQL(交易类业务数据), Mongo(内容类业务数据)
+4.运维
+    Nginx,Tomcat,
+    Linux,Docker
+5.大数据处理
+    Hadoop,Spark,Flink,Kafka
+6.数据分析&挖掘
+    Scrapy, ElasticSearch
+    Numpy,Pandas,Scipy,Matplotlib,Seaborn
+7.推荐系统
+    ?
+
+1.交易产品 (基础交易系统)
+2.内容产品 (基础内容系统)
+3.数据中心 (大数据处理,数据分析&挖掘)
+4.用户增长 (推荐系统,运营推广)
 ```
 
 #### 基础学习
 ```
 数据结构&常见算法: 这是最基础的基础
 数据库原理: 学习数据库的设计思路,提升思维
-网络&安全: 这个很重要,TCP/IP协议,常见的安全问题及解决办法
-操作系统原理: 这个就比较难了
+网络&安全: 这个很重要也比较复杂,TCP/IP协议,常见的安全问题及解决办法
+操作系统原理: 这个就比较难了 可以系统学习Linux
     CPU(计算),寄存器高速缓存内存磁盘(存储),磁盘&网络IO(数据传输字节流转)
     内核态,用户态,进程,线程...
-高级算法&数学原理: 这个也难,哈哈哈
-语言编译原理: 这个也难,呵呵呵
+高级算法&数学原理: 这个很难,哈哈哈
+语言编译原理: 这个也很难,呵呵呵
 ```
