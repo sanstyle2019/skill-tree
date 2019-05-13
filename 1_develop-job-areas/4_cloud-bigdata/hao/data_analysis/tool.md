@@ -67,6 +67,53 @@ CPU的矢量化指令计算，加载寄存器中的多个连续浮点数。另�
 注意提升效率的技巧：避免采用隐式拷贝，而是采用就地操作的方式。
 good: x*=2 bad: y=x*2 
 ```
+##### 1.ndarry对象
+``` 
+多维数组 维数称为秩(rank) 每一个线性的数组称为一个轴(axes)
+秩就是描述轴的数量
+import numpy as np
+a = np.array([1,2,3])
+b = np.array([[1,2,3],[4,5,6],[7,8,9]])
+a.shape   (3,)
+a.dtype   dtype('int32')
+
+persontype = np.dtype({
+    'names':['name', 'age', 'chinese', 'math', 'english'],
+    'formats':['S32','i', 'i', 'i', 'f']})
+peoples = np.array([("ZhangFei",32,75,100, 90),("GuanYu",24,85,96,88.5),
+       ("ZhaoYun",28,85,92,96.5),("HuangZhong",29,65,85,100)],
+    dtype=persontype)
+ages = peoples[:]['age']
+print np.mean(ages)
+```
+
+##### 2.ufunc
+``` 
+NumPy 中很多 ufunc 函数计算速度非常快，因为都是采用C语言实现的。
+连续数组的创建：
+x1 = np.arange(1,11,2) array([1, 3, 5, 7, 9]) 初始值、终值(不包括)、步长
+x2 = np.linspace(1,9,5) linear space 线性等分向量 array([1., 3., 5., 7., 9.]) 初始值 终值(包括)、元素个数
+
+运算函数
+print np.add(x1, x2)
+print np.subtract(x1, x2)
+print np.multiply(x1, x2)
+print np.divide(x1, x2)
+print np.power(x1, x2)
+print np.remainder(x1, x2)
+print np.mod(x1,x2)
+
+统计函数
+最大值、最小值、平均值、正态分布、方差、标准差
+a = np.array([[1,2,3], [4,5,6], [7,8,9]])
+print np.amin(a) 扁平最小
+print np.amin(a,0) x轴最小 axis=0 轴
+print np.amin(a,1) y轴最小 axis=1 轴
+print np.amax(a) 扁平最大 
+print np.amax(a,0) x轴最大
+print np.amax(a,1) y轴最大
+最大值与最小值之差
+```
 
 #### Pandas
 
