@@ -112,7 +112,55 @@ print np.amin(a,1) y轴最小 axis=1 轴
 print np.amax(a) 扁平最大 
 print np.amax(a,0) x轴最大
 print np.amax(a,1) y轴最大
-最大值与最小值之差
+
+最大值与最小值之差ptp()
+a = np.array([[1,2,3], [4,5,6], [7,8,9]])
+print np.ptp(a) #8
+print np.ptp(a,0) #array([6, 6, 6])
+print np.ptp(a,1) #array([2, 2, 2])
+
+统计数组的百分位数 percentile()
+a = np.array([[1,2,3], [4,5,6], [7,8,9]])
+print np.percentile(a, 50) #5.0
+print np.percentile(a, 50, axis=0) #array([4., 5., 6.])
+print np.percentile(a, 50, axis=1) #array([2., 5., 8.])
+
+统计数组中的中位数 median()、平均数 mean()
+a = np.array([[1,2,3], [4,5,6], [7,8,9]])
+# 求中位数
+print np.median(a)
+print np.median(a, axis=0)
+print np.median(a, axis=1)
+# 求平均数
+print np.mean(a)
+print np.mean(a, axis=0)
+print np.mean(a, axis=1)
+
+统计数组中的加权平均值 average()
+a = np.array([1,2,3,4])
+wts = np.array([1,2,3,4])
+print(np.average(a))
+print(np.average(a,weights=wts))
+
+统计数组中的标准差 std()、方差 var()
+方差的计算是指每个数值与平均值之差的平方求和的平均值，即 mean((x - x.mean())** 2)。
+标准差是方差的算术平方根。在数学意义上，代表的是一组数据离平均值的分散程度。
+a = np.array([1,2,3,4])
+print np.std(a) #1.118033988749895
+print np.var(a) #1.25
+
+NumPy 排序
+排序是算法中使用频率最高的一种，也是在数据分析工作中常用的方法，计算机专业的同学会在大学期间的算法课中学习。
+sort(a, axis=-1, kind=‘quickssort’, order=None)，默认使用快速排序
+kind可以是quicksort,mergesort,heapsort代表快速排序、合并排序、堆排序
+axis=-1 沿着数组的最后一个轴进行排序, axis=None代表采用扁平化的方式作为一个向量进行排序。
+a = np.array([[4,3,2],[2,4,1]])
+print np.sort(a) # array([[2, 3, 4],[1, 2, 4]])
+print np.sort(a, axis=None) # array([1, 2, 2, 3, 4, 4])
+print np.sort(a, axis=0)  
+print np.sort(a, axis=1)  
+
+                                   
 ```
 
 #### Pandas
