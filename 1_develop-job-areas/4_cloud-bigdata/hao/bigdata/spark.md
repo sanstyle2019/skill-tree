@@ -114,6 +114,7 @@ Machine Learning (Prediction with Logistic Regression)
 
 ```
 
+#### 5.2 Launching on a Cluster
 ``` 
 val conf = new SparkConf()
   .setMaster(...)
@@ -122,7 +123,8 @@ val conf = new SparkConf()
 val sc = new SparkContext(conf)
 
 Standby Masters with ZooKeeper
-
-
 ```
+
+#### 5.3 Quick Start
+
 
