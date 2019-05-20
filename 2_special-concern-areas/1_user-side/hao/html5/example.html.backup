@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Example</title>
+    <style>
+        .container {width: 98%; margin: 10px auto; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <p class="#tips"></p>
+</div>
+
+<div class="container">
+    <audio controls>
+        <source src="https://www.runoob.com/try/demo_source/horse.ogg" type="audio/ogg">
+        <source src="https://www.runoob.com/try/demo_source/horse.mp3" type="audio/mpeg">
+        您的浏览器不支持 audio 元素。
+    </audio>
+</div>
+
+<div class="container">
+    <button onclick="playPause()">播放/暂停</button>
+    <button onclick="makeBig()">放大</button>
+    <button onclick="makeSmall()">缩小</button>
+    <button onclick="makeNormal()">普通</button>
+    <br>
+    <video id="video1" width="420" controls>
+        <source src="https://www.runoob.com/try/demo_source/movie.mp4" type="video/mp4">
+        <source src="https://www.runoob.com/try/demo_source/movie.ogg" type="video/ogg">
+        你的浏览器不支持 video 标签。
+    </video>
+</div>
+
+<div class="container">
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <canvas id="myCanvas2" width="200" height="100"></canvas>
+    <canvas id="myCanvas3" width="200" height="100"></canvas>
+
+    <!--
+    <p>Image to use:</p>
+    <img id="scream" src="https://www.runoob.com/try/demo_source/img_the_scream.jpg" alt="The Scream" width="220" height="277">
+    <p>Canvas:</p>
+    <canvas id="myCanvas4" width="250" height="300" style="border:1px solid #d3d3d3;">
+    -->
+</div>
+
+<div class="container">
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"
+                 style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;">
+    </svg>
+</div>
+
+<div class="container">
+    <p id="demo">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
+    <button onclick="getLocation()">点我</button>
+</div>
+
+<script type="text/javascript">
+    if(typeof(Storage)!=="undefined") {
+        // 是的! 支持 localStorage  sessionStorage 对象!
+    } else {
+        // 抱歉! 不支持 web 存储。
+        document.getElementById('tips').innerText('抱歉! 不支持 web 存储。');
+    }
+
+    let myVideo = document.getElementById("video1");
+    function playPause() {
+        if (myVideo.paused) myVideo.play();
+        else myVideo.pause();
+    }
+    function makeBig() {
+        myVideo.width = 560;
+    }
+    function makeSmall() {
+        myVideo.width = 320;
+    }
+    function makeNormal() {
+        myVideo.width = 420;
+    }
+
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, 150, 75);
+
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,100);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(95,50,40,0,2*Math.PI); // arc(x,y,r,start,stop)
+    ctx.stroke();
+
+    ctx.font="30px Arial"; // font - 定义字体
+    // ctx.fillText("Hello World",10,50); // fillText(text,x,y) - 在 canvas 上绘制实心的文本
+    ctx.strokeText("Hello JS",20,60); // strokeText(text,x,y) - 在 canvas 上绘制空心的文本
+
+    let c2 = document.getElementById("myCanvas2");
+    let ctx2 = c2.getContext("2d");
+    // 创建渐变
+    let grd2 = ctx2.createLinearGradient(0,0,200,0);
+    grd2.addColorStop(0,"red");
+    grd2.addColorStop(1,"white");
+    // 填充渐变
+    ctx2.fillStyle = grd2;
+    ctx2.fillRect(10,10,150,80);
+
+    let c3 = document.getElementById("myCanvas3");
+    let ctx3 = c3.getContext("2d");
+    // 创建渐变
+    let grd3 = ctx3.createRadialGradient(75,50,5,90,60,100);
+    grd3.addColorStop(0,"red");
+    grd3.addColorStop(1,"white");
+    // 填充渐变
+    ctx3.fillStyle = grd3;
+    ctx3.fillRect(10,10,150,80);
+
+    // let c4 = document.getElementById("myCanvas4");
+    // let ctx4 = c4.getContext("2d");
+    // let image = document.getElementById("scream");
+    // image.onload = ()=>ctx4.drawImage(image,10,10); // drawImage(image,x,y)
+
+    let x = document.getElementById("demo");
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "该浏览器不支持获取地理位置。";
+        }
+    }
+    function showPosition(position) {
+        x.innerHTML = "纬度: " + position.coords.latitude
+                + "，经度: " + position.coords.longitude
+                + "，海拔: " + (position.coords.altitude ? position.coords.altitude : '未知');
+    }
+</script>
+</body>
+</html>
