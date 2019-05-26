@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Video Example</title>
+    <style>
+        /* 小屏幕（平板，大于等于 768px） */
+        @media (min-width: 768px) { .float-element {float: none; width: 98%; margin: 0 1% 30px 1%;} }
+        /* 中等屏幕（桌面显示器，大于等于 992px） */
+        @media (min-width: 992px) { .float-element {float: left; width: 48%; margin: 0 1% 30px 1%;} }
+        /* 大屏幕（大桌面显示器，大于等于 1200px） */
+        @media (min-width: 1200px) { .float-element {float: left; width: 31.3%; margin: 0 1% 30px 1%;} }
+        .container {width: 97%; margin: 30px 1.5%;text-align: center;}
+        ul,ol {list-style-type: none;}
+        /*.float-element {float: left; width: 31.33%; margin: 0 1% 30px 1%;}*/
+        .video-element {width: 100%; border: 1px solid #000;}
+        .title {float: left; margin-left: 5px; margin-bottom: 10px; max-width: 60%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+        .star {float: right; margin-right: 5px;}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h4>Video Example</h4>
+    <p class="nav">
+        <a href="javascript:renderVideo(1);">汽车视频</a>
+        <a href="javascript:renderVideo(2);">数码视频</a>
+        <a href="javascript:renderVideo(3);">轻奢视频</a>
+    </p>
+    <div id="video-auto" >
+        <div class="float-element">
+            <video class="video-element" id="" controls>
+                <source src="https://dm30webimages.lynkco.com.cn/LynkCoPortal/Content/images/chenxing2/03shangshi/KV/lynk03TVC.mp4" type="video/mp4">
+            </video>
+            <div>
+                <span class="title" title="领克01，见证不凡。领克01，见证不凡。领克01，见证不凡。">领克01，见证不凡。领克01，见证不凡。领克01，见证不凡。</span>
+                <span class="star">￥39</span>
+                <span class="star">￥29</span>
+                <span class="star">￥19</span>
+            </div>
+        </div>
+    </div>
+    <div id="video-digital" >
+
+    </div>
+    <div id="video-luxury">
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    let renderVideo = (type)=>{
+        let videoType = 'video/mp4';
+        let videoAutoArray = [{
+                id: '01',
+                src: 'https://dm30webimages.lynkco.com.cn/LynkCoPortal/Files/Kvs/Cars/TVC01.mp4',
+                type: videoType,
+                title: '领克01，见证不凡。',
+                autoplay: true
+            },
+            {
+                id: '02',
+                src: 'https://dm30webimages.lynkco.com.cn/LynkCoPortal/Files/Kvs/Cars/02%20TVC-90s.mp4',
+                type: videoType,
+                title: '领克02，见证不凡。领克02，见证不凡。'
+            },
+            {
+                id: '03',
+                src: 'https://dm30webimages.lynkco.com.cn/LynkCoPortal/Content/images/chenxing2/03shangshi/KV/lynk03TVC.mp4',
+                type: videoType,
+                title: '领克03，见证不凡。领克03，见证不凡。领克03，见证不凡。'
+            },
+            {
+                id: '04',
+                src: 'https://www.ghac.cn/Vehicles/honda/accord-sporthybrid/Video/HEV_NEYMAR_30s.mp4',
+                type: videoType,
+                title: '是谁在放肆，美到犯规！'
+            },
+            {
+                id: '05',
+                src: 'https://www.ghac.cn/video/accord10/video/accord10_2_30s.mp4',
+                type: videoType,
+                title: '第十代雅阁，推背感就是过瘾！'
+            },
+            {
+                id: '06',
+                src: 'https://www.ghac.cn/vehicles/honda/vezel/video/VEZEL_TVC.mp4',
+                type: videoType,
+                title: '让梦想走的更远！'
+            },
+            {
+                id: '07',
+                src: 'https://www.mercedes-benz.com.cn/content/dam/mb-cn/vehicles/sedan/c-class-l/C-Class_FL_Video_60s_MASTER.mp4',
+                type: videoType,
+                title: '心所向，驰以恒！'
+            },
+            {
+                id: '08',
+                src: 'https://www.mercedes-benz.com.cn/content/dam/mb-cn/vehicles/sedan/s-class/S%E7%BA%A7%E8%BD%BF%E8%BD%A6.mp4',
+                type: videoType,
+                title: '梅赛德斯-奔驰 S级豪华轿车'
+            },
+            {
+                id: '09',
+                src: 'https://www.mercedes-benz.com.cn/content/dam/mb-cn/vehicles/sedan/s-class/M256%E7%9B%B4%E5%88%976%E7%BC%B8%E5%8F%91%E5%8A%A8%E6%9C%BA.mp4',
+                type: videoType,
+                title: '梅赛德斯-奔驰 S级豪华轿车 内蕴'
+            },
+            {
+                id: '10',
+                src: 'https://www.mercedes-benz.com.cn/content/dam/mb-cn/vehicles/sedan/s-class/%E6%99%BA%E8%83%BD%E9%A9%BE%E9%A9%B6%E8%BE%85%E5%8A%A9%E5%A5%97%E8%A3%85.mp4',
+                type: videoType,
+                title: '梅赛德斯-奔驰 S级豪华轿车 思想'
+            },
+            {
+                id: '11',
+                src: 'http://cx-5.changan-mazda.com.cn/assets/video/index/1.mp4',
+                type: videoType,
+                title: '马自达 CX-5'
+            },
+            {
+                id: '12',
+                src: 'http://cx-5.changan-mazda.com.cn/assets/video/index/intro.mp4',
+                type: videoType,
+                title: '马自达 CX-5'
+            },
+            {
+                id: '13',
+                src: 'https://img.dongfeng-nissan.com.cn/Content/car/altima/highlight_video/design-video.mp4',
+                type: videoType,
+                title: '全新日产天籁'
+            },
+            {
+                id: '14',
+                src: 'https://gcloudfile.gac-toyota.com.cn/library/CarVedio/newCamry/momentum.mp4',
+                type: videoType,
+                title: '广汽丰田凯美瑞'
+            },
+            {
+                id: '15',
+                src: 'https://geely-portal-prod-ntt-obs-02.obs.myhwclouds.com/GeelyPromotion/BinRui/BINGRUI/Videos/%E5%90%89%E5%88%A9A06%E9%A2%84%E7%83%AD%E8%A7%86%E9%A2%91_%E6%B7%B7%E5%90%88%E7%AF%87_Final.mp4',
+                type: videoType,
+                title: '吉利宾瑞'
+            },
+            {
+                id: '16',
+                src: 'https://geely-portal-prod-ntt-obs-02.obs.myhwclouds.com/GeelyPromotion/BinRui/BINGRUI/Videos/%E5%90%89%E5%88%A9%E7%BC%A4%E7%91%9E%E4%BA%A7%E5%93%81%E5%8A%9F%E8%83%BDVCR%E5%8A%A8%E6%80%81%E7%AF%87FINAL_0815.mp4',
+                type: videoType,
+                title: '吉利宾瑞'
+            },
+            {
+                id: '17',
+                src: 'https://geely-portal-prod-ntt-obs-02.obs.myhwclouds.com/GeelyPromotion/BinRui/BINGRUI/Videos/%E5%90%89%E5%88%A9%E7%BC%A4%E7%91%9E%E4%BA%A7%E5%93%81%E5%8A%9F%E8%83%BDVCR%E9%9D%99%E6%80%81%E7%AF%87B-copy%E4%BF%AE%E6%94%B90720.mp4',
+                type: videoType,
+                title: '吉利宾瑞'
+            },
+            {
+                id: '18',
+                src: 'https://promotion.geely.com/gc9/video/image.mp4',
+                type: videoType,
+                title: '吉利新博瑞-形象篇'
+            },
+            {
+                id: '19',
+                src: 'https://promotion.geely.com/gc9/video/smart.mp4',
+                type: videoType,
+                title: '吉利新博瑞-大智篇'
+            },
+            {
+                id: '20',
+                src: 'https://promotion.geely.com/gc9/video/beauty.mp4',
+                type: videoType,
+                title: '吉利新博瑞-大美篇'
+            },
+            {
+                id: '21',
+                src: 'https://promotion.geely.com/gc9/video/service.mp4',
+                type: videoType,
+                title: '吉利新博瑞-服务篇'
+            }
+        ];
+        let videoDigitalArray = [{
+                id: '01',
+                src: 'https://www.apple.com/105/media/cn/iphone-xr/2018/e7f073a7-e8ae-4c18-937b-91d8939fcadd/films/design/iphone-xr-design-tpl-cn-2018_1280x720h.mp4',
+                type: videoType,
+                title: 'iPhone XR，iPhone 的新一代。',
+                autoplay: true
+            },
+            {
+                id: '02',
+                src: 'https://www.apple.com/105/media/cn/iphone-xs/2018/674b340a-40f1-4156-bbea-00f386459d3c/films/design/iphone-xs-design-tpl-cn-2018_1280x720h.mp4',
+                type: videoType,
+                title: 'iPhone XS，iPhone 的新一代。'
+            },
+            {
+                id: '03',
+                src: 'https://www.apple.com/105/media/cn/apple-watch-series-4/2018/d33fb9a0-f7f4-4e2d-8e17-f29c2ac2460f/films/reveal/watch-reveal-tpl-cn-2018_1280x720h.mp4',
+                type: videoType,
+                title: 'Apple Watch Series 4。一睹为快。'
+            },
+            {
+                id: '04',
+                src: 'https://www.apple.com/105/media/cn/apple-watch-series-4/2018/d33fb9a0-f7f4-4e2d-8e17-f29c2ac2460f/films/product/watch-product-tpl-cn-2018_1280x720h.mp4',
+                type: videoType,
+                title: 'Apple Watch Series 4。全新登场。'
+            },
+            {
+                id: '05',
+                src: 'https://www.apple.com/105/media/cn/ipad-pro/2018/cE249dd1_58dc_487a_880b_6a1bc197cc43/films/product/ipad-pro-product-tpl-cn-2018_1280x720h.mp4',
+                type: videoType,
+                title: '新一代 iPad Pro，全面新生。'
+            },
+            {
+                id: '06',
+                src: 'https://www.apple.com/105/media/cn/ipad-pro/2019/9c95d826_c3e4_4bd0_bd35_6f9ebac7b21a/films/next-computer/ipad-pro-next-computer-tpl-cn-2018_1280x720h.mp4',
+                type: videoType,
+                title: '揭秘 5 个 iPad Pro 不为人知的厉害之处。'
+            },
+            {
+                id: '07',
+                src: 'https://www.apple.com/105/media/ww/macbook-air/2018/9f419882_aefd_4083_902e_efcaee17a0b8/films/reveal/mba-reveal-tpl-ww-2018_1280x720h.mp4',
+                type: videoType,
+                title: 'MacBook Air。轻轻地，再次倾心。'
+            },
+            {
+                id: '08',
+                src: 'https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/cae-legoup-video-target/fc28b9ca-fafd-4ad4-a0f5-e30516ce2bad.mp4',
+                type: videoType,
+                title: '三星Galaxy S10。强悍性能，震撼来袭。'
+            },
+            {
+                id: '09',
+                src: 'https://1251250874.vod2.myqcloud.com/439f276avodtransgzp1251250874/5be5440b5285890787231462054/v.f20.mp4',
+                type: videoType,
+                title: '华为 P30系列，未来影像。'
+            },
+            {
+                id: '10',
+                src: 'https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/cae-legoup-video-target/83333ee5-3661-495f-924f-a52087dee872.mp4',
+                type: videoType,
+                title: 'OPPO Reno系列，全新拍照手机，10倍混合光变。'
+            },
+            {
+                id: '11',
+                src: 'https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/cae-legoup-video-target/94b9f35c-cf94-4b7e-8552-45684224270f.mp4',
+                type: videoType,
+                title: '小米，去探索。'
+            }
+        ];
+        let videoLuxuryArray = [{
+                id: '01',
+                src: 'https://vodsl3orvte.vod.126.net/vodsl3orvte/SqBRUCvb_2418506918_hd.mp4',
+                type: videoType,
+                title: 'FURLA 芙拉 FURLA MIMI 系列 女士链条单肩斜挎包。',
+                autoplay: true
+            }
+        ];
+        let template = (video)=>{
+            return `<div class="float-element">
+                <video class="video-element" id="${video.id}" controls>
+                    <source src="${video.src}" type="${video.type}">
+                </video>
+                <div>
+                    <span class="title" title="${video.title}">${video.title}</span>
+                    <span class="star">￥39</span>
+                    <span class="star">￥29</span>
+                    <span class="star">￥19</span>
+                </div>
+            </div>`;
+        };
+
+        let targetArray = ['video-auto', 'video-digital', 'video-luxury'];
+        targetArray.forEach((value, index)=>{
+            document.getElementById(value).innerHTML = '';
+        });
+
+        let videoArray = [], target = '';
+        if (type != null && type !== '') {
+            if (type == '1') {
+                videoArray = videoAutoArray;
+                target = targetArray[0];
+            } else if (type == '2') {
+                videoArray = videoDigitalArray;
+                target = targetArray[1];
+            } else if (type == '3') {
+                videoArray = videoLuxuryArray;
+                target = targetArray[2];
+            }
+        }
+
+        let len = videoArray.length;
+        if (len === 0 || target == null || target === '') {return;}
+
+        document.getElementById(target).style.display = 'none';
+
+        let html = '';
+        for (let i = 0; i < len; i++) {
+            let video = videoArray[i];
+            video.id = '100'.concat(i.toString());
+            html += template(video);
+        }
+        document.getElementById(target).innerHTML = html;
+
+        let videoElementArray = document.getElementsByClassName('video-element');
+        len = videoElementArray.length;
+        let batchOnEvent = ()=>{
+            for (let i = 0; i < len; i++) {
+                let videoElement = videoElementArray[i];
+                // onplay onpause onended
+                videoElement.onplay = ()=>{
+                    batchDoAction(videoElement, 'ended');
+                };
+                videoElement.onended = ()=>{
+                    if (i < len-1) {
+                        let nextVideoElement = videoElementArray[i+1];
+                        nextVideoElement.play();
+                    }
+                };
+            }
+        };
+        let batchDoAction = (current, action)=>{
+            for (let i = 0; i < len; i++) {
+                let videoElement = videoElementArray[i];
+                if (current.id != null && current.id === videoElement.id) {
+                    continue;
+                }
+                // load play pause
+                switch (action) {
+                    case 'ended': videoElement.pause(); break;
+                    case 'pause': videoElement.pause(); break;
+                    default: break;
+                }
+            }
+        };
+        batchOnEvent();
+
+        document.getElementById(target).style.display = 'block';
+
+        videoElementArray = document.getElementsByClassName('video-element');
+        len = videoElementArray.length;
+        if (len > 0) {
+            let firstVideoElement = videoElementArray[0];
+            firstVideoElement.autoplay = true;
+            firstVideoElement.load();
+        }
+    };
+
+    renderVideo(3);
+</script>
+</body>
+</html>
