@@ -403,14 +403,74 @@ ended	当目前的播放列表已结束时触发。
 volumechange	当音量已更改时触发。
 ```
 
-### CSS
-- 重点难点
+### CSS 指层叠样式表(Cascading Style Sheets)
+#### 重点难点
 ``` 
-!important;
+!important 慎用 与 多重样式优先级
 float
 background:rgba(255,0,0,0.5);
 display: block 块样式
     header, section, footer, aside, nav, article, figure {display: block;}
+px,em,rem: 16px=1em
+    
+```
+#### 基础
+- 选择器 Selector
+``` 
+id: # class: .
+```
+- 背景 background
+``` 
+bg-color: #ff0000,rgb(255,0,0),red
+bg-image: url('')
+bg-repeat: repeat-x 水平方向平铺, no-repeat 不让图像平铺
+bg-position: 背景图片位置，不影响内容 left,center,right top,center,bottom x% y% 
+bg-attachment: 背景图片是否随着页面滚动 scroll默认是 fixed固定 inherit从父元素继承
+bg: 简写 color image repeat position  
+```
+- 文本 text
+``` 
+color: #ff0000 rgb(255,0,0) red
+text-align: left,center,right 水平对齐方式
+text-decoration: none,underline,line-through,overline 文本下划线
+text-transform: uppercase,lowercase,capitalize
+text-indent: 50px 文本缩进
+letter-spacing: 字符间距，单词间距
+line-height: 行高 
+vertical-align: 垂直对齐方式 top,middle,bottom
+white-space: 元素中空白的处理方式
+word-spacing: 字间距，字母间距
+```
+- 字体 font
+``` 
+Sans-serif
+Serif
+Monospace
+
+font-family: 
+font-style: normal,italic,oblique.
+font-size: 16px,1em,100%
+font-weight: bold
+font: 简写 size family; style weight size family
+```
+- 链接 link
+``` 
+a:link 未访问过的链接
+a:visited 已访问过的链接 
+a:hover 鼠标放在链接上时
+a:active 链接被点击的那一刻
+a:hover {color: #ff0000;text-decoration:underline;bg-color: #fff000;}
+```
+- 列表 ul
+``` 
+ul.li {list-style-type: circle,none,square}
+ol.li {list-style-type: upper-roman,lower-alpha}
+ul {li-style-image: url('');}
+简写: list-style: {square url('')}
+```
+- 表格 table
+``` 
+table,th,td
 ```
 
 ### JavaScript
@@ -433,4 +493,9 @@ parent
 4xx:客户端错误
     401 Unauthorized 未授权的
     403 Forbidden 被禁止
+    404 Not Found 资源不存在
+    405 Method Not Allowed	方法不被允许
+5xx:服务器错误
+    500 Internal Server Error 服务器内部错误
+    502 Bad Gateway  
 ```
