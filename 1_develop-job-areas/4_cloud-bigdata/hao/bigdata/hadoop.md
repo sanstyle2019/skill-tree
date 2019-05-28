@@ -68,7 +68,79 @@ etc/hadoop/hdfs-site.xml:
 ResourceManager 
 NodeManager
 
-
+etc/hadoop/mapred-site.xml:
+    <configuration>
+        <property>
+            <name>mapreduce.framework.name</name>
+            <value>yarn</value>
+        </property>
+    </configuration>
+etc/hadoop/yarn-site.xml:
+    <configuration>
+        <property>
+            <name>yarn.nodemanager.aux-services</name>
+            <value>mapreduce_shuffle</value>
+        </property>
+    </configuration>    
+$ sbin/start-yarn.sh    
+ResourceManager - http://localhost:8088/
+$ sbin/stop-yarn.sh
 ```
 
 ### Documentation
+
+#### General
+``` 
+NameNode
+DataNode	
+Secondary NameNode	
+ResourceManager	
+NodeManager	
+WebAppProxy	
+MapReduce JobHistory Server
+	
+etc/hadoop/core-site.xml 
+etc/hadoop/hdfs-site.xml
+etc/hadoop/yarn-site.xml
+etc/hadoop/mapred-site.xml
+
+NameNode	http://nn_host:port/	Default HTTP port is 50070.
+ResourceManager	http://rm_host:port/	Default HTTP port is 8088.
+MapReduce JobHistory Server	http://jhs_host:port/	Default HTTP port is 19888.
+
+fs
+jar
+```
+- FileSystem Shell
+``` 
+bin/hadoop fs <args> or hdfs dfs <args>
+> hadoop fs -cat URI
+> hadoop fs -copyFromLocal <localsrc> URI or -put
+> hadoop fs -copyToLocal URI or -get
+> hadoop fs -cp
+> hadoop dfs -df /user/hadoop/dir1
+> hadoop fs -find / -name test -print
+> hadoop fs -help
+> hadoop fs -ls /user/hadoop/file1
+> hadoop fs -mkdir /user/hadoop/dir1 /user/hadoop/dir2
+> hadoop fs -mv /user/hadoop/file1 /user/hadoop/file2
+> hadoop fs -rm hdfs://nn.example.com/file /user/hadoop/emptydir
+> hadoop fs -rmdir /user/hadoop/emptydir
+> hadoop fs -rm -r
+```
+
+#### HDFS
+``` 
+Moving Computation is Cheaper than Moving Data
+
+NameNode and DataNodes
+
+Data Blocks: A typical block size used by HDFS is 128 MB.
+
+```
+
+#### YARN
+``` 
+The ResourceManager has two main components: Scheduler and ApplicationsManager.
+
+```

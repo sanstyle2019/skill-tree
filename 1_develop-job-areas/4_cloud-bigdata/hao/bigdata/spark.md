@@ -126,5 +126,79 @@ Standby Masters with ZooKeeper
 ```
 
 #### 5.3 Quick Start
+``` 
+Scala|Python
+./bin/spark-shell
+./bin/pyspark
+```
+
+#### 5.4 RDD
+``` 
+Spark提供的主要抽象是弹性分布式数据集（RDD）
+Spark中的第二个抽象是可以在并行操作中使用的共享变量。
+
+import org.apache.spark.SparkContext
+import org.apache.spark.SparkConf
+val conf = new SparkConf().setAppName(appName).setMaster(master)
+new SparkContext(conf)
+
+import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.JavaRDD;
+import org.apache.spark.SparkConf;
+SparkConf conf = new SparkConf().setAppName(appName).setMaster(master);
+JavaSparkContext sc = new JavaSparkContext(conf);
+
+from pyspark import SparkContext, SparkConf
+conf = SparkConf().setAppName(appName).setMaster(master)
+sc = SparkContext(conf=conf)
+
+$ ./bin/spark-shell --master local[4]
+$ ./bin/pyspark --master local[4]
 
 
+Resilient Distributed Datasets (RDDs)
+
+val data = Array(1, 2, 3, 4, 5)
+val distData = sc.parallelize(data)
+
+List<Integer> data = Arrays.asList(1, 2, 3, 4, 5);
+JavaRDD<Integer> distData = sc.parallelize(data);
+
+data = [1, 2, 3, 4, 5]
+distData = sc.parallelize(data)
+```
+- Transformations
+``` 
+map(func)
+filter(func)
+flatMap(func)
+groupByKey([numPartitions])
+reduceByKey(func, [numPartitions])
+```
+- Actions
+```
+reduce(func)
+collect()
+count()
+saveAsTextFile(path)
+countByKey()
+```
+- RDD Persistence
+``` 
+MEMORY_ONLY
+MEMORY_AND_DISK
+DISK_ONLY
+```
+- Shared Variables
+``` 
+1.Broadcast Variables
+val broadcastVar = sc.broadcast(Array(1, 2, 3))
+broadcastVar.value // Array[Int] = Array(1, 2, 3)
+
+2.Accumulators
+```
+
+#### 5.5 Spark SQL, DataFrames and Datasets
+``` 
+
+```
