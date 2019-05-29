@@ -210,6 +210,7 @@ Linux: Bash
 ```
 
 #### 恍恍惚惚 Top5
+- [1.Java 2.Python 3.Scala 4.JavaScript]
 - 1.后端 Java
 ```
 SpringCloud,Dubbo,ZK,分布式问题,架构问题
@@ -310,6 +311,10 @@ Vue.js,jQuery
 ```
 
 #### 系统之路
+- 1.用户端 交互+样式 JavaScript [Coding] [Top] 目前对搭建基础平台来说最薄弱
+- 2.服务端 Java [Coding] [Top] 近年核心，架构能力
+- 5.大数据处理 Scala [Coding] [Top] 对找工作最有帮助
+- 6.数据分析&挖掘 Python [Coding] 闲时玩玩，只是觉得有意思
 ``` 
 1.用户端 交互+样式 JavaScript [Coding] [Top]
     Vue.js/jQuery + 好用的UI样式组件

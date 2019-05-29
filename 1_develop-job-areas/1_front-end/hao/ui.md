@@ -411,8 +411,8 @@ float
 background:rgba(255,0,0,0.5);
 display: block 块样式
     header, section, footer, aside, nav, article, figure {display: block;}
+overflow:     
 px,em,rem: 16px=1em
-    
 ```
 #### 基础
 - 选择器 Selector
