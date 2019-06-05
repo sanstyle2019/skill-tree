@@ -1,6 +1,10 @@
 ### GoAccess
 ``` 
 Nginx
+
+> iftop
+> nethogs
+> nmap -v -A 127.0.0.1
 ```
 
 #### Download
