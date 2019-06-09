@@ -8,17 +8,21 @@
     <title>Video Example</title>
     <style>
         /* 小屏幕（平板，大于等于 768px） */
-        @media (min-width: 768px) { .float-element {float: none; width: 98%; margin: 0 1% 30px 1%;} }
+        @media (min-width: 342px) { .float-element {float: none; width: 98%; margin: 0 1% 30px 1%;} }
         /* 中等屏幕（桌面显示器，大于等于 992px） */
-        @media (min-width: 992px) { .float-element {float: left; width: 48%; margin: 0 1% 30px 1%;} }
+        @media (min-width: 683px) { .float-element {float: left; width: 48%; margin: 0 1% 30px 1%;} }
         /* 大屏幕（大桌面显示器，大于等于 1200px） */
-        @media (min-width: 1200px) { .float-element {float: left; width: 31.3%; margin: 0 1% 30px 1%;} }
+        @media (min-width: 1025px) { .float-element {float: left; width: 31.3%; margin: 0 1% 30px 1%;} }
+        /* 超大屏幕（大桌面显示器，大于等于 1200px） */
+        @media (min-width: 1366px) { .float-element {float: left; width: 23%; margin: 0 1% 30px 1%;} }
+
         .container {width: 97%; margin: 30px 1.5%;text-align: center;}
         ul,ol {list-style-type: none;}
         /*.float-element {float: left; width: 31.33%; margin: 0 1% 30px 1%;}*/
         .video-element {width: 100%; border: 1px solid #000;}
         .title {float: left; margin-left: 5px; margin-bottom: 10px; max-width: 60%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
         .star {float: right; margin-right: 5px;}
+        .title a {text-decoration: none;}
     </style>
 </head>
 <body>
@@ -254,6 +258,7 @@
                 src: 'https://vodsl3orvte.vod.126.net/vodsl3orvte/SqBRUCvb_2418506918_hd.mp4',
                 type: videoType,
                 title: 'FURLA 芙拉 FURLA MIMI 系列 女士链条单肩斜挎包。',
+                href: 'https://goods.kaola.com/product/5102064.html',
                 autoplay: true
             }
         ];
@@ -263,7 +268,7 @@
                     <source src="${video.src}" type="${video.type}">
                 </video>
                 <div>
-                    <span class="title" title="${video.title}">${video.title}</span>
+                    <span class="title" title="${video.title}"><a href="${video.href}" target="_blank">${video.title}</a></span>
                     <span class="star">￥39</span>
                     <span class="star">￥29</span>
                     <span class="star">￥19</span>
@@ -299,6 +304,7 @@
         for (let i = 0; i < len; i++) {
             let video = videoArray[i];
             video.id = '100'.concat(i.toString());
+            video.href = video.href ? video.href : 'javascript:void(0);';
             html += template(video);
         }
         document.getElementById(target).innerHTML = html;
