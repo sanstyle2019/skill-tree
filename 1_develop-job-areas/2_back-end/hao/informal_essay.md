@@ -307,7 +307,7 @@ MySQL (数据库原理)
 ```  
 Vue.js,jQuery
 前端的重要性在于，它是产品力的体现形式，非常重要
-标准: ECMAScript2015,HTML5,CSS3
+标准: ECMAScript2015,HTML5,CSS3,TypeScript
 交互: jQuery的生态还是很丰富的，不过Vue.js这种，开发起来很爽
     Vue生态:
         
@@ -379,6 +379,12 @@ Vue.js,jQuery
 3.数据中心 (大数据处理,数据分析&挖掘)
 4.用户增长 (推荐系统,运营推广)
 ```
+
+#### 学习方向
+``` 
+要么做技术平台、要么做垂直下沉，未来属于数据智能时代。
+```
+- [多多客](https://www.doodooke.com/)
 
 #### 基础学习
 ```

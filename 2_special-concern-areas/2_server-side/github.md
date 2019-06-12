@@ -17,6 +17,9 @@
 
 #### Java:Dubbo
 
+#### Java项目脚手架
+- [WxJava （微信开发 Java SDK）](https://github.com/Wechat-Group/WxJava)
+- [基于SpringBoot,更简洁的后台管理系统 Guns](https://www.oschina.net/p/guns)
 
 ### 2.分布式问题 Distributed
 
@@ -52,6 +55,9 @@
 #### Node.js:Express.js
 
 #### Node.js:Koa2.js
+
+#### Node.js:ThinkJS
+- [NideShop 开源微信小程序商城服务端 API（Node.js + ThinkJS）](https://github.com/tumobi/nideshop)
 
 
 ### 6.Go(并发、分布式有优势)

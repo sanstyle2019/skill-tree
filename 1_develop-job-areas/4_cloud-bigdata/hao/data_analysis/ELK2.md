@@ -19,34 +19,36 @@ GET /_cat/indices?v
 
 - Common
 ```
-PUT /customer?pretty
-GET /_cat/indices?v
+创建Index     PUT /customer?pretty
+查询Index     GET /_cat/indices?v
 
+在目标Index下创建Document（无此Index会自动创建） 
 PUT /customer/_doc/1?pretty
 {
   "name": "John Doe"
 }
-
+查询目标Index下的Document     
 GET /customer/_doc/1?pretty
 
+更新目标Index下的Document     
 PUT /customer/_doc/1?pretty
 {
   "name": "Jane Doe"
 }
 
-DELETE /customer?pretty
-GET /_cat/indices?v
+删除Index     DELETE /customer?pretty
+查询Index     GET /_cat/indices?v
 
-POST /customer/_doc?pretty
+创建Document不指定ID     POST /customer/_doc?pretty
 {
   "name": "Jane Doe"
 }
-POST /customer/_update/1?pretty
+更新Document     POST /customer/_update/1?pretty
 {
-  "doc": { "name": "Jane Doe" }
-}
+   "doc": { "name": "Jane Doe" }
+ }
 
-DELETE /customer/_doc/2?pretty
+删除Document指定ID     DELETE /customer/_doc/2?pretty
 ```
 
 - Search API
