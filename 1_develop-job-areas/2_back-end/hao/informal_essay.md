@@ -365,6 +365,7 @@ Vue.js,jQuery
         开源数据集
     数据清洗、转换、分析、挖掘:
         Numpy,Pandas,Scipy,
+        kaggle
     数据可视化:
         Matplotlib,Seaborn,Pyecharts
         

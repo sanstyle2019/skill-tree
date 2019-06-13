@@ -22,6 +22,7 @@
 - [刘未鹏 | Mind Hacks](http://mindhacks.cn/)
 - [平凡希](https://www.cnblogs.com/xiaoxi/)
 - [廖雪峰大神](https://www.liaoxuefeng.com/)
+- [解道JDON](https://www.jdon.com/)
 
 ### 最火github项目
 
