@@ -12,6 +12,7 @@
 
 #### Java:SpringBoot
 - [mall项目是一套电商系统，包括前台商城系统及后台管理系统](https://github.com/macrozheng/mall)
+- [又一个小商城](https://github.com/linlinjava/litemall)
 
 #### Java:SpringCloud
 
@@ -20,6 +21,10 @@
 #### Java项目脚手架
 - [WxJava （微信开发 Java SDK）](https://github.com/Wechat-Group/WxJava)
 - [基于SpringBoot,更简洁的后台管理系统 Guns](https://www.oschina.net/p/guns)
+- [微人事是一个前后端分离的人力资源管理系统，项目采用SpringBoot+Vue开发](https://github.com/lenve/vhr)
+- [一款基于代码生成器的JAVA快速开发平台](https://github.com/zhangdaiscott/jeecg-boot)
+- [又一个小商城](https://github.com/linlinjava/litemall)
+- [mall-admin-web是一个电商后台管理系统的前端项目，基于Vue+Element实现](https://github.com/macrozheng/mall-admin-web)
 
 ### 2.分布式问题 Distributed
 
